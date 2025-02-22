@@ -1,0 +1,52 @@
+<div class="motus-wrapper">
+    <div class="week-selector">
+        <button
+        *ngFor="let week of allWeeks"
+        [ngClass]="{ 'week': true, 'selected': selectedWeeks.includes(week) }"
+        (click)="onWeekSelect(week)"
+        [disabled]="gameWon"
+      >
+        {{ week }}
+      </button>
+    </div>
+  <div class="grid">
+    <div
+      [ngClass]="{ row: true, selected: rowIndex == currentRow }"
+      *ngFor="let row of attempts; let rowIndex = index"
+    >
+      <div
+        class="cell"
+        *ngFor="let letter of row; let colIndex = index"
+        [ngClass]="{
+          correct: currentRow > rowIndex && letter === wordToGuess[colIndex],
+          present:
+            (currentRow > rowIndex &&
+            isPresentButNotOverused(letter, rowIndex, colIndex)) || gameWon,
+          absent:
+            currentRow > rowIndex && letter && !wordToGuess.includes(letter)
+        }"
+      >
+        {{ letter }}
+      </div>
+    </div>
+  </div>
+
+  <div class="keyboard">
+    <div *ngFor="let row of alphabet" class="keyboard-row">
+      <button
+        *ngFor="let letter of row"
+        class="key"
+        (click)="selectLetter(letter)"
+        [disabled]="gameWon"
+      >
+        {{ letter }}
+      </button>
+    </div>
+    <button class="key clean" (click)="clearLetter()">Effacer</button>
+  </div>
+
+  <div class="actions-btn">
+    <button (click)="validateWord()" [disabled]="gameWon">Valider</button>
+    <button (click)="refreshGame()" [disabled]="gameWon">Nouveau Mot</button>
+  </div>
+</div>

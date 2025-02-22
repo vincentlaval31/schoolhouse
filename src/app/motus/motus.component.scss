@@ -1,0 +1,143 @@
+.motus-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.week-selector {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+/* Styles pour la grille */
+.grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+  }
+  
+  .row {
+    display: flex;
+    gap: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
+  }
+  
+  .cell {
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: #f0f0f0;
+  }
+
+  .row.selected {
+
+    .cell {
+      border: 2px solid #335F8A;
+    }
+  }
+  
+  .correct {
+    background-color: #55D5E0;
+    color: white;
+  }
+  
+  .present {
+    background-color: #F6B12D;
+    color: black;
+  }
+  
+  .absent {
+    background-color: #D3D3D3;
+    color: black;
+  }
+  
+  /* Styles pour le clavier */
+  .keyboard {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-top: 20px;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .week {
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: #D3D3D3;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  .week.selected {
+    background-color: #124c8a;
+  }
+
+  .keyboard-row {
+    display: flex;
+    gap: 5px;
+  }
+  
+  .key {
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: #124c8a;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .key:hover {
+    background-color: #55D5E0;
+  }
+  
+  .key:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+
+  .key.clean {
+    width: auto;
+  }
+
+.actions-btn {
+    display: flex;
+    gap: 10px;
+    margin-top: 50px;
+
+    button {
+        padding: 15px 30px;
+        font-size: 18px;
+        font-weight: bold;
+        text-transform: uppercase;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: background-color 0.2s;
+    }
+}
+  
