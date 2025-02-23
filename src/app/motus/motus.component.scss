@@ -1,8 +1,19 @@
 .motus-wrapper {
     display: flex;
+    font-family: 'Roboto', sans-serif;
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    position: relative;
+}
+
+.points {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
 .week-selector {
@@ -49,20 +60,16 @@
     }
   }
   
-  .correct {
-    background-color: #55D5E0;
-    color: white;
-  }
-  
   .present {
     background-color: #F6B12D;
     color: black;
   }
-  
-  .absent {
-    background-color: #D3D3D3;
-    color: black;
+
+  .correct {
+    background-color: #55D5E0;
+    color: white;
   }
+
   
   /* Styles pour le clavier */
   .keyboard {
@@ -76,11 +83,11 @@
   }
 
   .week {
-    width: 40px;
+    width: 65px;
     height: 40px;
     border-radius: 5px;
     border: none;
-    font-size: 18px;
+    font-size: 12px;
     font-weight: bold;
     text-transform: uppercase;
     background-color: #D3D3D3;
@@ -109,6 +116,10 @@
     color: white;
     cursor: pointer;
     transition: background-color 0.2s;
+  }
+
+  .key.selected {
+    background-color: #55D5E0;
   }
   
   .key:hover {
