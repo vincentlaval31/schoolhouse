@@ -151,4 +151,58 @@
         transition: background-color 0.2s;
     }
 }
+
+/* Media queries for smartphones */
+@media (max-width: 600px) {
+  .motus-wrapper {
+      padding: 10px;
+  }
+
+  .points {
+      top: 10px;
+      right: 10px;
+      font-size: 18px;
+  }
+
+  .week-selector {
+      flex-wrap: wrap;
+      gap: 5px;
+      margin-top: 10px;
+  }
+
+  .grid {
+      gap: 5px;
+      margin-bottom: 20px;
+      margin-top: 20px;
+  }
+
+  .cell {
+      width: 40px;
+      height: 40px;
+      font-size: 14px;
+  }
+
+  .key {
+      width: 30px;
+      height: 30px;
+      font-size: 14px;
+  }
+
+  .actions-btn {
+    display: flex;
+    gap: 10px;
+    margin-top: 50px;
+
+    button {
+        padding: 10px 20px;
+        font-size: 14px;
+        font-weight: bold;
+        text-transform: uppercase;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: background-color 0.2s;
+    }
+}
+}
   
